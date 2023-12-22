@@ -54,9 +54,38 @@ a {
   margin: 10px 0;
 }
 
+/* flex container */
 
 .pricing-grid {
   max-width:750px;
   margin: 0 auto;
   
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center; /* if commented out, the flex items will stretch by default and be the same height */
+}
+
+.plan {
+  flex: 1;
+  /* border: 1px solid red; */
+  background: rgba(255,255,255,0.2);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 4px;
+  text-align: center;
+
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.plan > * {
+
+  /* giving width 100% to every flex item, otherwise it's broken */
+  flex: 1 1 100%; 
+
+}
+
+.plan .cta {
+  align-self: flex-end;
 }
