@@ -27,10 +27,19 @@ a {
 
 .item {
   background:rgba(255,255,255,0.2);
-  margin:10px;
-  padding:20px;
+  margin: 10px;
+  padding: 20px;
   font-size: 30px;
 }
 
 /* Flexbox Starts Here: */
 
+.elements {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  /* subtract 20px margin from every (left and right) side of each flex item in order to make 3 flex items fit in 1 row */
+  flex: 1 1 calc(33.33% - 20px);
+}
